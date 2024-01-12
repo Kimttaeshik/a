@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="365dp"
+        android:layout_height="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/line1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="78dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="173dp"
+                android:layout_height="39dp"
+                android:gravity="center"
+                android:text="Add routine"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:text="취소"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="16dp"
+                android:text="저장"
+                android:textColor="#00FF9D"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="407dp"
+        android:layout_height="624dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="커스텀 리스트"
+                    android:textColor="#B9BDFE"
+                    tools:layout_editor_absoluteX="24dp"
+                    tools:layout_editor_absoluteY="116dp" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/line2"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="67dp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="147dp"
+                    android:layout_height="44dp"
+                    android:text="TextView"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="총 ?코스"
+                    android:textColor="#B9BDFE"
+                    tools:layout_editor_absoluteX="24dp"
+                    tools:layout_editor_absoluteY="73dp" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="177dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="344dp"
+                            android:layout_height="289dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.492"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0"
+                            app:srcCompat="@drawable/rectangle1" />
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="32dp"
+                            android:layout_height="17dp"
+                            android:text="횟수 :"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="192dp"
+                            tools:layout_editor_absoluteY="97dp" />
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="70dp"
+                            android:layout_height="17dp"
+                            android:text="부 제목"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="45dp"
+                            tools:layout_editor_absoluteY="22dp" />
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="51dp"
+                            android:layout_height="17dp"
+                            android:text="1 세트 ㅣ"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="45dp"
+                            tools:layout_editor_absoluteY="97dp" />
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="무게 :"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="96dp"
+                            tools:layout_editor_absoluteY="97dp" />
+
+                        <TextView
+                            android:id="@+id/textView20"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="kg"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="155dp"
+                            tools:layout_editor_absoluteY="97dp" />
+
+                        <TextView
+                            android:id="@+id/textView21"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="회"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="253dp"
+                            tools:layout_editor_absoluteY="97dp" />
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="85dp"
+                            android:layout_height="30dp"
+                            android:text="본 운동"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            tools:layout_editor_absoluteX="45dp"
+                            tools:layout_editor_absoluteY="39dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="333dp"
+                            android:layout_height="7dp"
+                            android:layout_marginTop="80dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/imageView4"
+                            app:srcCompat="@drawable/rectangle2" />
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="19dp"
+                            android:layout_height="18dp"
+                            app:srcCompat="@drawable/plus"
+                            tools:layout_editor_absoluteX="301dp"
+                            tools:layout_editor_absoluteY="97dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="20dp"
+                            android:layout_height="14dp"
+                            app:srcCompat="@drawable/minus"
+                            tools:layout_editor_absoluteX="336dp"
+                            tools:layout_editor_absoluteY="100dp" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber"
+                            android:layout_width="29dp"
+                            android:layout_height="21dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            tools:layout_editor_absoluteX="126dp"
+                            tools:layout_editor_absoluteY="97dp" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber2"
+                            android:layout_width="29dp"
+                            android:layout_height="21dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            tools:layout_editor_absoluteX="224dp"
+                            tools:layout_editor_absoluteY="97dp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/group" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/guide" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
