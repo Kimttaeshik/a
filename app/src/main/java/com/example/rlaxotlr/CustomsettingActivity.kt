@@ -15,7 +15,7 @@ class CustomsettingActivity : AppCompatActivity() {
 
         val btn: Button = findViewById(R.id.btn)
         btn.setOnClickListener {
-            val intent = Intent(this, IncustomActivity::class.java)
+            val intent = Intent(this, KindActivity::class.java)
             startActivity(intent)
 
 

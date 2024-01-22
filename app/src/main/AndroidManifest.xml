@@ -37,6 +37,9 @@
         <activity
             android:name=".ChestexerciseActivity">
         </activity>
+        <activity
+            android:name=".KindActivity">
+        </activity>
 
     </application>
 
