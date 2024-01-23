@@ -20,7 +20,7 @@ class KindActivity : AppCompatActivity() {
             startActivity(nextintent)
 //            setResult(99, nextintent)
 //
-            finish()
+//            finish()
 
 
         }
