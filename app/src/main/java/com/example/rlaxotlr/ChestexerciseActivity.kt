@@ -93,10 +93,11 @@ class ChestexerciseActivity : AppCompatActivity() {
                     }
                     4 -> {
                         val reintent = Intent(this@ChestexerciseActivity, CustomsettingActivity::class.java)
-                        reintent.putExtra("커스텀", Exercise_all(exercise_name = titleList.get(4), Sets = Sets, Weight = Weight))
+                        reintent.putExtra("커스텀", Exercise_all(exercise_name = "", Sets = Sets, Weight = Weight))
                         setResult(ResultReturn, reintent)
                         finish()
                     }
+
                 }
 
                 if (position == adapter.itemCount - 1) {

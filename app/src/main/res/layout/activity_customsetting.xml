@@ -186,12 +186,14 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardview1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/rectangle1"
                 android:backgroundTint="#00116D"
+                android:visibility="gone"
                 app:cardCornerRadius="30dp"
                 app:cardElevation="30dp">
 
@@ -239,8 +241,10 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/emptyConst1"
                         android:layout_width="match_parent"
-                        android:layout_height="35dp">
+                        android:layout_height="35dp"
+                        android:visibility="gone">
 
                         <TextView
                             android:id="@+id/textView17"
@@ -299,16 +303,6 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
-                            android:id="@+id/imageView6"
-                            android:layout_width="19dp"
-                            android:layout_height="18dp"
-                            android:layout_marginEnd="16dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/imageView7"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/plus" />
-
-                        <ImageView
                             android:id="@+id/imageView7"
                             android:layout_width="20dp"
                             android:layout_height="14dp"
@@ -324,6 +318,8 @@
                             android:layout_height="31dp"
                             android:ems="10"
                             android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/textView19"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -334,6 +330,8 @@
                             android:layout_height="31dp"
                             android:ems="10"
                             android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/textView18"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -351,14 +349,446 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/emptyConst2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:visibility="visible">
+                        android:layout_height="35dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/textView17_01"
+                            android:layout_width="9dp"
+                            android:layout_height="16dp"
+                            android:layout_marginStart="12dp"
+                            android:text="2"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView11_01"
+                            android:layout_width="37dp"
+                            android:layout_height="18dp"
+                            android:text="세트 ㅣ"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView17_01"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView18_01"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="무게 :"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView11_01"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView20_01"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="kg"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/editTextNumber2_01"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView21_01"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="회"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/editTextNumber_01"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView7_01"
+                            android:layout_width="20dp"
+                            android:layout_height="14dp"
+                            android:layout_marginEnd="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/minus" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber_01"
+                            android:layout_width="37dp"
+                            android:layout_height="31dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView19_01"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber2_01"
+                            android:layout_width="33dp"
+                            android:layout_height="31dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView18_01"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView19_01"
+                            android:layout_width="32dp"
+                            android:layout_height="17dp"
+                            android:text="횟수 :"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView20_01"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/emptyConst3"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/textView17_02"
+                            android:layout_width="9dp"
+                            android:layout_height="16dp"
+                            android:layout_marginStart="12dp"
+                            android:text="3"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView11_02"
+                            android:layout_width="37dp"
+                            android:layout_height="18dp"
+                            android:text="세트 ㅣ"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView17_02"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView18_02"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="무게 :"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView11_02"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView20_02"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="kg"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/editTextNumber2_02"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView21_02"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="회"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/editTextNumber_02"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView7_02"
+                            android:layout_width="20dp"
+                            android:layout_height="14dp"
+                            android:layout_marginEnd="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/minus" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber_02"
+                            android:layout_width="37dp"
+                            android:layout_height="31dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView19_02"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber2_02"
+                            android:layout_width="33dp"
+                            android:layout_height="31dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView18_02"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView19_02"
+                            android:layout_width="32dp"
+                            android:layout_height="17dp"
+                            android:text="횟수 :"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView20_02"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/emptyConst4"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/textView17_03"
+                            android:layout_width="9dp"
+                            android:layout_height="16dp"
+                            android:layout_marginStart="12dp"
+                            android:text="4"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView11_03"
+                            android:layout_width="37dp"
+                            android:layout_height="18dp"
+                            android:text="세트 ㅣ"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView17_03"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView18_03"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="무게 :"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView11_03"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView20_03"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="kg"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/editTextNumber2_03"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView21_03"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="회"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/editTextNumber_03"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView7_03"
+                            android:layout_width="20dp"
+                            android:layout_height="14dp"
+                            android:layout_marginEnd="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/minus" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber_03"
+                            android:layout_width="37dp"
+                            android:layout_height="31dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView19_03"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber2_03"
+                            android:layout_width="33dp"
+                            android:layout_height="31dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView18_03"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView19_03"
+                            android:layout_width="32dp"
+                            android:layout_height="17dp"
+                            android:text="횟수 :"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView20_03"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/emptyConst5"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/textView17_04"
+                            android:layout_width="9dp"
+                            android:layout_height="16dp"
+                            android:layout_marginStart="12dp"
+                            android:text="5"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView11_04"
+                            android:layout_width="37dp"
+                            android:layout_height="18dp"
+                            android:text="세트 ㅣ"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView17_04"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView18_04"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="무게 :"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView11_04"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView20_04"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="kg"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/editTextNumber2_04"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView21_04"
+                            android:layout_width="30dp"
+                            android:layout_height="17dp"
+                            android:text="회"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/editTextNumber_04"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView7_04"
+                            android:layout_width="20dp"
+                            android:layout_height="14dp"
+                            android:layout_marginEnd="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/minus" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber_04"
+                            android:layout_width="37dp"
+                            android:layout_height="31dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView19_04"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber2_04"
+                            android:layout_width="33dp"
+                            android:layout_height="31dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView18_04"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView19_04"
+                            android:layout_width="32dp"
+                            android:layout_height="17dp"
+                            android:text="횟수 :"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView20_04"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
                         <ImageView
                             android:id="@+id/imageView66"
-                            android:layout_width="18dp"
-                            android:layout_height="11dp"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -372,12 +802,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardview1_1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/rectangle1"
                 android:backgroundTint="#00116D"
+                android:visibility="gone"
                 app:cardCornerRadius="30dp"
                 app:cardElevation="30dp">
 
@@ -573,4 +1005,12 @@
 
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_lode"
+        android:layout_width="106dp"
+        android:layout_height="50dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
