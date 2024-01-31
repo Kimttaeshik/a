@@ -125,22 +125,54 @@ class CustomsettingActivity : AppCompatActivity() {
             findViewById(R.id.editTextNumber2_04)
         )
 
+//        minusButtons.forEachIndexed { index, button ->
+//            button.setOnClickListener {
+//                // 현재 버튼의 인덱스가 0보다 큰 경우에만 동작
+//                if (currentIndex > 0) {
+//                    currentIndex-- // 인덱스 감소
+//                    editTextNumbers[currentIndex].text.clear() // 현재 인덱스의 에딧 텍스트 초기화
+//                    editTextNumber2s[currentIndex].text.clear() // 현재 인덱스의 에딧 텍스트 초기화
+//
+//                    // 다른 에딧 텍스트 뷰들을 한 칸씩 당김
+//                    for (i in currentIndex until editTextNumbers.size - 1) {
+//                        editTextNumbers[i].text = editTextNumbers[i + 1].text
+//                        editTextNumber2s[i].text = editTextNumber2s[i + 1].text
+//                    }
+//                    // 마지막 에딧 텍스트 뷰 초기화
+//                    editTextNumbers.last().text.clear()
+//                    editTextNumber2s.last().text.clear()
+//
+//                    val currentEmptyConst = emptyConstList[currentIndex]
+//                    currentEmptyConst.visibility = View.GONE
+//                } else {
+//                    // currentIndex가 0일 때, currentIndex를 마지막 인덱스로 설정
+//                    currentIndex = emptyConstList.size
+//                    // 모든 emptyConst가 사라진 후에는 currentIndex를 초기화합니다.
+//                    emptyConstList.forEach { it.visibility = View.GONE }
+//
+//                    // 에딧 텍스트 초기화
+//                    editTextNumbers.forEach { it.text.clear() }
+//                    editTextNumber2s.forEach { it.text.clear() }
+//                }
+//            }
+//        }
+
         minusButtons.forEachIndexed { index, button ->
             button.setOnClickListener {
                 // 현재 버튼의 인덱스가 0보다 큰 경우에만 동작
                 if (currentIndex > 0) {
-                    currentIndex-- // 인덱스 감소
-                    editTextNumbers[currentIndex].text.clear() // 현재 인덱스의 에딧 텍스트 초기화
-                    editTextNumber2s[currentIndex].text.clear() // 현재 인덱스의 에딧 텍스트 초기화
-
-                    // 다른 에딧 텍스트 뷰들을 한 칸씩 당김
+                    // 다음 인덱스의 에딧 텍스트 값으로 현재 인덱스의 값을 설정
                     for (i in currentIndex until editTextNumbers.size - 1) {
-                        editTextNumbers[i].text = editTextNumbers[i + 1].text
-                        editTextNumber2s[i].text = editTextNumber2s[i + 1].text
+                        editTextNumbers[i].setText(editTextNumbers[i + 1].text)
+                        editTextNumber2s[i].setText(editTextNumber2s[i + 1].text)
                     }
+
                     // 마지막 에딧 텍스트 뷰 초기화
                     editTextNumbers.last().text.clear()
                     editTextNumber2s.last().text.clear()
+
+                    // 현재 인덱스 감소
+                    currentIndex--
 
                     val currentEmptyConst = emptyConstList[currentIndex]
                     currentEmptyConst.visibility = View.GONE
@@ -156,6 +188,7 @@ class CustomsettingActivity : AppCompatActivity() {
                 }
             }
         }
+
 
 
 
