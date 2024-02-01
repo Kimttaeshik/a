@@ -159,35 +159,29 @@ class CustomsettingActivity : AppCompatActivity() {
 
         minusButtons.forEachIndexed { index, button ->
             button.setOnClickListener {
-                // 현재 버튼의 인덱스가 0보다 큰 경우에만 동작
-                if (currentIndex > 0) {
-                    // 다음 인덱스의 에딧 텍스트 값으로 현재 인덱스의 값을 설정
-                    for (i in currentIndex until editTextNumbers.size - 1) {
-                        editTextNumbers[i].setText(editTextNumbers[i + 1].text)
-                        editTextNumber2s[i].setText(editTextNumber2s[i + 1].text)
+                // 현재 인덱스가 0일 때, 마지막 인덱스로 설정
+                if (currentIndex == 0) {
+                    currentIndex = emptyConstList.size - 1
+                } else {
+                    currentIndex--
+                    // 현재 인덱스가 리스트 범위 내에 있는지 확인
+                    if (currentIndex < editTextNumbers.size && currentIndex < editTextNumber2s.size) {
+                        // 마지막 값은 초기화합니다.
+                        editTextNumbers[currentIndex].text.clear()
+                        editTextNumber2s[currentIndex].text.clear()
                     }
 
-                    // 마지막 에딧 텍스트 뷰 초기화
-                    editTextNumbers.last().text.clear()
-                    editTextNumber2s.last().text.clear()
 
-                    // 현재 인덱스 감소
-                    currentIndex--
+                }
 
-                    val currentEmptyConst = emptyConstList[currentIndex]
-                    currentEmptyConst.visibility = View.GONE
-                } else {
-                    // currentIndex가 0일 때, currentIndex를 마지막 인덱스로 설정
-                    currentIndex = emptyConstList.size
-                    // 모든 emptyConst가 사라진 후에는 currentIndex를 초기화합니다.
-                    emptyConstList.forEach { it.visibility = View.GONE }
-
-                    // 에딧 텍스트 초기화
-                    editTextNumbers.forEach { it.text.clear() }
-                    editTextNumber2s.forEach { it.text.clear() }
+                // 현재 인덱스에 해당하는 레이아웃을 숨깁니다.
+                if (currentIndex < emptyConstList.size) {
+                    emptyConstList[currentIndex].visibility = View.GONE
                 }
             }
         }
+
+
 
 
 
