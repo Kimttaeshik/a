@@ -1461,7 +1461,7 @@
                             android:textColor="#FFFFFF"
                             android:textSize="24sp"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView14_1" />
+                            app:layout_constraintTop_toBottomOf="@+id/textView14_2" />
 
                         <ImageView
                             android:id="@+id/imageView5_2"
@@ -2020,7 +2020,7 @@
                         android:visibility="visible">
 
                         <ImageView
-                            android:id="@+id/imageView66_1"
+                            android:id="@+id/imageView66_2"
                             android:layout_width="25dp"
                             android:layout_height="20dp"
                             app:layout_constraintBottom_toBottomOf="parent"

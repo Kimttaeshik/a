@@ -268,6 +268,108 @@ class CustomsettingActivity : AppCompatActivity() {
             }
         }
         //////////////////////////////////////////////2222222222222222222////////////////////
+        val emptyConstList_2: List<ConstraintLayout> = listOf(
+            findViewById(R.id.emptyConst1_2),
+            findViewById(R.id.emptyConst2_2),
+            findViewById(R.id.emptyConst3_2),
+            findViewById(R.id.emptyConst4_2),
+            findViewById(R.id.emptyConst5_2),
+            // 추가적으로 필요한 emptyConst들을 여기에 추가합니다.
+        )
+
+        var currentIndex_2 = 0
+
+        val btn_set_plus_2: ImageView = findViewById(R.id.imageView66_2)
+        btn_set_plus_2.setOnClickListener {
+            if (0 <= currentIndex_2 && currentIndex_2 < emptyConstList_2.size) {
+                val currentEmptyConst_2 = emptyConstList_2[currentIndex_2]
+                currentEmptyConst_2.visibility = View.VISIBLE
+                currentIndex_2++ // 인덱스 증가
+            } else {
+                // 모든 emptyConst가 보여진 후에는 currentIndex를 초기화합니다.
+                currentIndex_2 = 5
+                // 혹은 다른 동작을 수행할 수 있습니다.
+            }
+        }
+
+        val minusButtons_2: List<ImageView> = listOf(
+            findViewById(R.id.imageView7_2),
+            findViewById(R.id.imageView7_01_2),
+            findViewById(R.id.imageView7_02_2),
+            findViewById(R.id.imageView7_03_2),
+            findViewById(R.id.imageView7_04_2)
+        )
+
+        val editTextNumbers_2: List<EditText> = listOf(
+            findViewById(R.id.editTextNumber_2),
+            findViewById(R.id.editTextNumber_01_2),
+            findViewById(R.id.editTextNumber_02_2),
+            findViewById(R.id.editTextNumber_03_2),
+            findViewById(R.id.editTextNumber_04_2)
+        )
+
+        val editTextNumber2s_2: List<EditText> = listOf(
+            findViewById(R.id.editTextNumber2_2),
+            findViewById(R.id.editTextNumber2_01_2),
+            findViewById(R.id.editTextNumber2_02_2),
+            findViewById(R.id.editTextNumber2_03_2),
+            findViewById(R.id.editTextNumber2_04_2)
+        )
+
+        minusButtons_2.forEachIndexed { index, button ->
+            button.setOnClickListener {
+                // 현재 버튼의 인덱스가 0보다 큰 경우에만 동작
+                if (currentIndex_2 > 0) {
+                    currentIndex_2-- // 인덱스 감소
+
+                    if (index == 0) {
+                        for (i in 0 until 4) {
+                            editTextNumbers_2[i].text = editTextNumbers_2[i + 1].text
+                            editTextNumber2s_2[i].text = editTextNumber2s_2[i + 1].text
+                        }
+                    }
+
+                    if (index == 1) {
+                        for (i in 1 until 4) {
+                            editTextNumbers_2[i].text = editTextNumbers_2[i + 1].text
+                            editTextNumber2s_2[i].text = editTextNumber2s_2[i + 1].text
+                        }
+                    }
+
+                    if (index == 2) {
+                        for (i in 2 until 4) {
+                            editTextNumbers_2[i].text = editTextNumbers_2[i + 1].text
+                            editTextNumber2s_2[i].text = editTextNumber2s_2[i + 1].text
+                        }
+                    }
+
+                    if (index == 3) {
+                        for (i in 3 until 4) {
+                            editTextNumbers_2[i].text = editTextNumbers_2[i + 1].text
+                            editTextNumber2s_2[i].text = editTextNumber2s_2[i + 1].text
+                        }
+                    }
+
+                    editTextNumbers_2[currentIndex_2].text.clear() // 현재 인덱스의 에딧 텍스트 초기화
+                    editTextNumber2s_2[currentIndex_2].text.clear() // 현재 인덱스의 에딧 텍스트 초기화
+
+                    val currentEmptyConst_2 = emptyConstList_2[currentIndex_2]
+                    currentEmptyConst_2.visibility = View.GONE
+                } else {
+                    // currentIndex가 0일 때, currentIndex를 마지막 인덱스로 설정
+                    currentIndex_2 = emptyConstList_2.size
+                    // 모든 emptyConst가 사라진 후에는 currentIndex를 초기화합니다.
+                    emptyConstList_2.forEach { it.visibility = View.GONE }
+
+                    // 에딧 텍스트 초기화
+                    editTextNumbers_2.forEach { it.text.clear() }
+                    editTextNumber2s_2.forEach { it.text.clear() }
+                }
+            }
+        }
+        /////////////////////////////33333333333333/////////////
+
+
     }
 
 
@@ -309,6 +411,8 @@ class CustomsettingActivity : AppCompatActivity() {
                         if (emptyTextView != null ) {
                             if(emptyTextView?.text.isNullOrEmpty()) {
 
+                                if (emptyCardView2?.visibility == View.VISIBLE) emptyCardView3?.visibility =
+                                    View.VISIBLE
                                 if (emptyCardView?.visibility == View.VISIBLE) emptyCardView2?.visibility =
                                     View.VISIBLE
                                 if (emptyCardView?.visibility == View.GONE) emptyCardView?.visibility =
