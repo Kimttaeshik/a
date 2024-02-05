@@ -40,6 +40,9 @@
         <activity
             android:name=".KindActivity">
         </activity>
+        <activity
+            android:name=".TimerActivity">
+        </activity>
 
     </application>
 

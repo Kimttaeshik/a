@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.rlaxotlr.sampledata.ExerciseSave
 import com.example.rlaxotlr.sampledata.Exercise_all
 
 @Suppress("DEPRECATION")
@@ -39,16 +40,26 @@ class CustomsettingActivity : AppCompatActivity() {
             requestLauncher.launch(intent)
         }
 
-        val btn_save : TextView = findViewById(R.id.textView9)
+        val btn_save: TextView = findViewById(R.id.textView9)
         btn_save.setOnClickListener {
-            SharedPreferenceUtils.saveData(this, "exname", textViews.getOrNull(0)?.text.toString())
+            val intent = Intent(this, TimerActivity::class.java)
+            startActivity(intent)
         }
 
-        val btn_lode : Button = findViewById(R.id.btn_lode)
-        btn_lode.setOnClickListener {
-            btn_lode.text = SharedPreferenceUtils.loadData(this, "exname")
 
-        }
+
+//        val btn_save: TextView = findViewById(R.id.textView9)
+//        btn_save.setOnClickListener {
+//            val exName: String = textViews.getOrNull(0)?.text.toString()
+//            SharedPreferenceUtils.saveData(this, "exname", ExerciseSave(exName))
+//        }
+//
+//        val btn_load: Button = findViewById(R.id.btn_lode)
+//        btn_load.setOnClickListener {
+//            val exName: String = SharedPreferenceUtils.loadData(this, "exname")?.name ?: ""
+//            btn_load.text = exName
+//        }
+
 
         ///////////////////////////////////여기서부터///////////////
 
